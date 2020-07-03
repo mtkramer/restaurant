@@ -3,6 +3,7 @@ public class MenuItem {
     private String name;
     private double price;
     private String description;
+    private boolean justIn = true;
 
     public MenuItem(String name, double price, String description) {
         this.name = name;
@@ -36,4 +37,9 @@ public class MenuItem {
         System.out.println("Description on " + this.name + " was changed");
         this.description = description;
     }
+
+    public boolean getJustIn() { return justIn; }
+
+    public void setJustIn(){ this.justIn = !this.justIn; }
+
 }
